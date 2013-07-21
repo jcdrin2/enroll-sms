@@ -23,6 +23,7 @@ def sms():
 
   while True:
     if u.state == 'READY':
+      send_message_to_user(u, 'welcome')
       return send_message_to_user(u, 'q-health-insurance')
     
     elif u.state == 'AWAITING-RESPONSE':
