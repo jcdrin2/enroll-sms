@@ -1,11 +1,8 @@
 from enrollsms import app
-import twilio.twiml
-import os
 from models import *
 from utils import *
 from message_data import message_data
-from flask import request, render_template, redirect
-
+from flask import request
 
 @app.teardown_request
 def shutdown_session(exception=None):
@@ -44,7 +41,7 @@ def sms():
       u.state = 'READY'
       db.session.add(u)
       break
-  
+
   return 'unrecognized state'
 
 @app.route('/users')

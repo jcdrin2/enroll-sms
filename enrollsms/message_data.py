@@ -39,5 +39,11 @@ message_data = {
       'kind': 'statement',
       'answer_options': None,
       'next_message':None
+    },
+  'reasons-to-enroll' : 
+    {
+      'kind': 'statement',
+      'answer_options': None,
+      'next_message':None
     }
 }
