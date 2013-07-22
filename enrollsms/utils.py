@@ -43,9 +43,12 @@ def get_or_create_user(phone_number):
   db.session.add(u)
   return u
 
-def send_message_to_user(u, key):
+def send_message_to_user(u, key, clarification=False):
   #send msg
-  text = render_template(key + '.html')
+  if clarification:
+    text = render_template(key + '-clarification.html')
+  else:
+    text = render_template(key + '.html')
   send_sms(u.phone_number, text)
   
   #set state

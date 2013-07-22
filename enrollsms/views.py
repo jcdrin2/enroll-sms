@@ -31,17 +31,15 @@ def sms():
 
       #valid msg > send next one
       if n_response:
-        next_message = message_data[u.last_message]['next_message'][n_response]
+        return send_message_to_user(u, message_data[u.last_message]['next_message'][n_response])
       #invalid msg > resend last one
       else:
-        next_message = u.last_message
-      return send_message_to_user(u, next_message)
+        return send_message_to_user(u, u.last_message, clarification=True)
 
     elif u.state == 'DONE':
       # for now keep looping finished users
       u.state = 'READY'
       db.session.add(u)
-      break
 
   return 'unrecognized state'
 
