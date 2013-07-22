@@ -30,7 +30,7 @@ def normalize_response(response):
     return 4
   
   #integer responses for coverage type question
-  elif r.isdigit() and r in range(1, 5):
+  elif r.isdigit() and int(r) in range(1, 5):
     return int(r)
 
   #invalid response
@@ -43,7 +43,7 @@ def get_or_create_user(phone_number):
   db.session.add(u)
   return u
 
-def send_message_to_user(u, key, clarification=False):
+def send_message_to_user(u, key):
   #send msg
   text = render_template(key + '.html')
   send_sms(u.phone_number, text)
