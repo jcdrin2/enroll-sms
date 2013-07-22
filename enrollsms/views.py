@@ -23,14 +23,14 @@ def sms():
 
   while True:
     if u.state == 'READY':
-      send_message_to_user(u, 'welcome')
+      send_sms(u.phone_number, render_template('welcome.html'))
       return send_message_to_user(u, 'q-health-insurance')
     
     elif u.state == 'AWAITING-RESPONSE':
       n_response = normalize_response(response)
 
       #valid msg > send next one
-      if user_valid_response(u, n_response):
+      if n_response:
         next_message = message_data[u.last_message]['next_message'][n_response]
       #invalid msg > resend last one
       else:

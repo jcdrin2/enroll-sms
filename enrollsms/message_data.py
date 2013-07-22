@@ -45,11 +45,5 @@ message_data = {
       'kind': 'statement',
       'answer_options': None,
       'next_message':None
-    },
-  'welcome' : 
-    {
-      'kind': 'statement',
-      'answer_options': None,
-      'next_message':None
-    },
+    }
 }

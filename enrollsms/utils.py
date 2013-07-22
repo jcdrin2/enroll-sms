@@ -37,9 +37,6 @@ def normalize_response(response):
   else:
     return False
 
-def user_valid_response(u, n_response):
-  return True
-
 def get_or_create_user(phone_number):
   u = User.query.filter(User.phone_number == phone_number).first()
   u = u if u else User(phone_number = phone_number)
