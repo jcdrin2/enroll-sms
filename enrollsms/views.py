@@ -14,11 +14,11 @@ def shutdown_session(exception=None):
 
 @app.route('/')
 def index():
-  return 'enroll-sms home'
+  return render_template('index.html')
 
 @app.route('/sms')
 def sms():
-  response = handle_global_response(request.values.get('Body'))
+  response = request.values.get('Body')
   u = get_or_create_user(request.values.get('From'))
 
   while True:

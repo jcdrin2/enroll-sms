@@ -6,9 +6,6 @@ from flask import request, render_template, redirect
 from twilio.rest import TwilioRestClient
 
 #utils
-def handle_global_response(response):
-  return response
-
 def normalize_response(response):
   r = response.strip().lower()
   r = re.sub(r'\W+', '', r)
