@@ -1,4 +1,5 @@
 from enrollsms import app
+import time
 from models import *
 from utils import *
 from message_data import message_data
@@ -24,6 +25,7 @@ def sms():
   while True:
     if u.state == 'READY':
       send_sms(u.phone_number, render_template('welcome.html'))
+      time.sleep(3)
       return send_message_to_user(u, 'q-health-insurance')
     
     elif u.state == 'AWAITING-RESPONSE':
