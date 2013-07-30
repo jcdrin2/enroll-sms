@@ -9,7 +9,7 @@ deploy
 -------
 Quick deploy using Heroku and Twilio:
 
-(1) Clone repo:
+(1) Clone repo
 
 ```
 $ git clone https://github.com/lippytak/enroll-sms.git
@@ -24,7 +24,7 @@ AUTH_TOKEN=[TWILIO AUTHENTICATION TOKEN]
 DATABASE_URL=[OPTIONAL LOCAL PG DB CONNECTION STRING]
 ```
 
-(3) Create heroku app:
+(3) Create heroku app
 
 ```
 $ heroku create
@@ -33,9 +33,9 @@ $ heroku create
 (4) Set environment variables on heroku: 
 
 ```
-heroku config:add TWIL_NUMBER=[TWILIO PHONE NUMBER e.g., +14157671553]
-heroku config:add ACCOUNT_SID=[TWILIO ACCOUNT SID]
-heroku config:add AUTH_TOKEN=[TWILIO AUTHENTICATION TOKEN]
+$ heroku config:add TWIL_NUMBER=[TWILIO PHONE NUMBER e.g., +14157671553]
+$ heroku config:add ACCOUNT_SID=[TWILIO ACCOUNT SID]
+$ heroku config:add AUTH_TOKEN=[TWILIO AUTHENTICATION TOKEN]
 ```
 
 (5) Provision heroku database: 
