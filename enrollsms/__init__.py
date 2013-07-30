@@ -4,7 +4,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-app.config['DEBUG'] = os.environ['DEBUG']
+app.config['DEBUG'] = os.environ.get('DEBUG', False)
 db = SQLAlchemy(app)
 
 import enrollsms.views
