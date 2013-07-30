@@ -49,3 +49,7 @@ $ heroku addons:add heroku-postgresql
 ```
 $ git push heroku master
 ```
+
+contributions
+-------
+We're not looking for contributions quite yet but feel free to email me at jacob@codeforamerica.org if you're really curious. Thanks!
