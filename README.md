@@ -30,7 +30,7 @@ DATABASE_URL=[OPTIONAL LOCAL PG DB CONNECTION STRING]
 $ heroku create
 ```
 
-(4) Set environment variables on heroku: 
+(4) Set environment variables on heroku
 
 ```
 $ heroku config:add TWIL_NUMBER=[TWILIO PHONE NUMBER e.g., +14157671553]
@@ -38,7 +38,7 @@ $ heroku config:add ACCOUNT_SID=[TWILIO ACCOUNT SID]
 $ heroku config:add AUTH_TOKEN=[TWILIO AUTHENTICATION TOKEN]
 ```
 
-(5) Provision heroku database: 
+(5) Provision heroku database
 
 ```
 $ heroku addons:add heroku-postgresql
